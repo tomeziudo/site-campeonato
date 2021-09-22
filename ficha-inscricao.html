@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campeonato</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <a href="ficha-inscricao.html">Ficha de Inscrição</a>
+        <a href="tabela-classificacao.html">Tabela de Classificação</a>
+    </nav>
+    <h1>Ficha de Inscrição</h1>
+    <form action="cadastrar.php" method="POST">
+        <p>
+            <label for="timeID">Nome do time:</label>
+            <input name="time" id="timeID" required>
+        </p>
+        <p>
+            <label for="responsavel">Nome do responsável:</label>
+            <input name="responsavel" id="responsavel" maxlength="15">
+        </p>
+        <p>
+            <label for="email_responsavel">E-mail do responsável:</label>
+            <input name="email" id="email_responsavel" name="email_responsavel">
+        </p>
+        <p>
+            <label>Cidade de origem:</label>
+            <select name="cidade">
+                <option value="sbo">Santa Bárbara</option>
+                <option value="ame">Americana</option>
+                <option value="sum">Sumaré</option>
+            </select>
+        </p>
+        <p>
+            <label>Campeonato:</label>
+            <input type="radio" name="campeonato" value="estadual">Estadual
+            <input type="radio" name="campeonato" value="regional">Regional
+        </p>
+        <p>
+            <label>Categoria</label>
+            <input type="checkbox" value="sub20">SUB20
+            <input type="checkbox" value="sub17">SUB17
+        </p>
+        <p>
+            <label for="consideracoes">Considerações</label>
+            <br>
+            <textarea name="consideracoes" id="consideracoes"></textarea>
+        </p>
+        <p>
+            <label>Escudo:</label>
+            <input type="file">
+        </p> 
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpar</button>
+    </form>
+    
+</body>
+</html>
